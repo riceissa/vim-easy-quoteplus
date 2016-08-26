@@ -2,17 +2,21 @@
 
 INTRODUCTION                                    *easy-quoteplus*
 
-Vim's default *quoteplus* register for accessing the system clipboard is
-somewhat tedious, and there have been various approaches to make access easier:
+Vim's *quoteplus* register, which stores the contents of the system clipboard,
+is somewhat tedious to access by default. As a result there have been various
+approaches to make access easier:
 
   * CUA keybindings with, e.g. |mswin.vim|
   * |clipboard-unnamedplus| to make |quoteplus| the default register for yank,
     delete, change, and put commands
   * Various |<Leader>| mappings
-  * |i_CTRL-R| followed by +
+  * |i_CTRL-R| followed by + (only works in insert mode, and doesn't solve
+    copying)
   * Solutions that insert system clipboard contents one character at a time,
     such as using Ctrl-Shift-v (perhaps with 'paste' enabled)
   * System Copy: https://github.com/christoomey/vim-system-copy
 
 This plugin is in this reference class, and makes use of the prefixes "c" and
-"g" as a way to make access easier.
+"g" as a way to make access easier. The prefix "c" is used in normal mode and
+the prefix "g" is used in visual mode; you can probably guess all or most of
+the mappings.
