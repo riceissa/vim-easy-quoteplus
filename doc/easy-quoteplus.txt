@@ -2,7 +2,7 @@
 
 INTRODUCTION                                    *easy-quoteplus*
 
-Vim's *quoteplus* register, which stores the contents of the system clipboard,
+Vim's |quoteplus| register, which stores the contents of the system clipboard,
 is somewhat tedious to access by default. As a result there have been various
 approaches to make access easier:
 
