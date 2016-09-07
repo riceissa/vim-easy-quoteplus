@@ -1,4 +1,4 @@
-*easy-quoteplus*  Easier access to *quoteplus*
+*easy-quoteplus*  Easier access to |quoteplus|
 
 INTRODUCTION                                    *easy-quoteplus*
 
