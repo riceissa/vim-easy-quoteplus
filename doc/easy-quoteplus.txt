@@ -32,7 +32,7 @@ gp				1gp		No
 "ap				"ap		Yes
 "agp				"agp		Yes
 5"+p				5gp		No
-5gp				5p`]		No
+5gp				5p`]<Space>	No
 5"+gp				5"+gp		Yes
 5"ap				5"ap		Yes
 5"agp				5"agp		Yes
