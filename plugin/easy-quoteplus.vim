@@ -10,8 +10,10 @@ if has('clipboard')
 
   vnoremap gy "+y
   vnoremap gY "+Y
-  vnoremap gp "+p
-  vnoremap gP "+P
+  " vnoremap gp "+p
+  " vnoremap gP "+P
+  vnoremap <expr> gp v:count == 1 ? 'gp' : '"+p'
+  vnoremap <expr> gP v:count == 1 ? 'gP' : '"+P'
 
   nnoremap cp "+p
   nnoremap cP "+P
