@@ -18,26 +18,19 @@ approaches to make access easier:
 
 This plugin is in this reference class, and makes use of the prefixes "c" and
 "g" as a way to make access easier. The prefix "c" is used in normal mode and
-the prefix "g" is used in visual mode; you can probably guess all or most of
-the mappings.
+the prefix "g" is used in visual mode (since "c" has prior meaning); you can
+probably guess all or most of the mappings. In visual mode, only yanking
+mappings are provided, because "gp" and "gP" have prior meaning. If you would
+like to override the default meanings for "gp" and "gP", the following is one
+way to do so: >
 
-The only mappings from default Vim that this plugin overrides are gp and gP in
-visual mode. However, even as this plugin overrides those mappings, it tries to
-do so somewhat delicately. The table below may be helpful.
+  vnoremap <expr> gp v:register !=# '"' ? '"' . v:register . 'gp' : '"+p'
+  vnoremap ""gp gp
+  vnoremap <expr> gP v:register !=# '"' ? '"' . v:register . 'gP' : '"+P'
+  vnoremap ""gP gP
+<
 
-To get in visual mode		Type		Mapping same as original?
-"+p				gp		No
-gp				1gp		No
-"+gp				"+gp		Yes
-"ap				"ap		Yes
-"agp				"agp		Yes
-5"+p				5gp		No
-5gp				5p`]<Space>	No
-5"+gp				5"+gp		Yes
-5"ap				5"ap		Yes
-5"agp				5"agp		Yes
-
-If you have a timeout for custom mappings, you can also type what you want but
-wait after the "g" in rows that have a "g" in the left column.
+This will access quoteplus when no register is prefixed, but will revert to
+the default meaning when a register is given, such as when typing `"xgp`.
 
  vim:tw=78:et:ts=8:ft=help:norl:
