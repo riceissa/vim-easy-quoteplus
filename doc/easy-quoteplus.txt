@@ -39,3 +39,5 @@ gp				1gp		No
 
 If you have a timeout for custom mappings, you can also type what you want but
 wait after the "g" in rows that have a "g" in the left column.
+
+ vim:tw=78:et:ts=8:ft=help:norl:
